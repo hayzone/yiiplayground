@@ -52,6 +52,10 @@
 						array('label'=>'Ajax / jQuery', 'items'=>array(
 							array('label'=>'Ajax request', 'url'=>array('/AjaxModule/ajax/ajaxRequest')),
 						)),
+					    array('label'=>'Yii学习','items'=>array(
+				               array('label'=>'test','url'=>['/']),	        
+			     			)
+            			),
 						array('label'=>'Interface', 'items'=>array(
 							array('label'=>'Zii dialog', 'url'=>array('/UiModule/jui/ziiDialog')),
 							array('label'=>'Zii datePicker', 'url'=>array('/UiModule/jui/ziiDatePicker')),

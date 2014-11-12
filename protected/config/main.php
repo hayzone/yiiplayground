@@ -20,6 +20,8 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Yii Playground',
+    'language'=>'zh-cn',
+    'timeZone'=>'Asia/Shanghai',
 
 	// preloading 'log' component
 	'preload'=>array('log', 'dbManager', 'uiSettings', 'lc', 'bootstrap'),
@@ -56,6 +58,15 @@ return array(
 		'lc'=>array(
 			'class' => 'application.components.LocaleManager',
 		),
+	    'urlManager'=>array(
+	        'urlFormat'=>'path',
+	        'showScriptName'=>false, //隐藏index.php
+	        'rules'=>array(
+	            '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+	            '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+	            '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+	        ),
+	    ),
 		// uncomment the following to use a MySQL database
 		/*
 		'db_mysql'=>array(
